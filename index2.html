@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manvir Singh | IT System Administrator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #02042B; /* Deep Indigo */
+            color: #E0E0E0; /* Light Gray */
+            overflow-x: hidden;
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .glass-card {
+            background: rgba(10, 5, 60, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(129, 140, 248, 0.15);
+            border-radius: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(163, 112, 247, 0.4);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+            color: #A7A6C5;
+            font-weight: 500;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #A370F7;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #A370F7;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #A370F7, #6C63FF);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(163, 112, 247, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(163, 112, 247, 0.5);
+        }
+        .accent-text {
+            color: #A370F7;
+            background: -webkit-linear-gradient(45deg, #A370F7, #6C63FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Timeline specific styles */
+        .timeline-line {
+            position: absolute;
+            left: 20px; /* Adjust based on dot size */
+            top: 10px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #A370F7, rgba(163, 112, 247, 0.1));
+        }
+        .skill-tag {
+            background: rgba(163, 112, 247, 0.15);
+            border: 1px solid rgba(163, 112, 247, 0.3);
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            color: #E0E0E0;
+            transition: all 0.3s ease;
+        }
+        .skill-tag:hover {
+            background: rgba(163, 112, 247, 0.3);
+            border-color: #A370F7;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-indigo-500 selection:text-white">
+    <div id="particles-js"></div>
+
+    <header class="bg-[#02042B]/80 backdrop-blur-md sticky top-0 z-50 border-b border-white/5">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-wider text-white">
+                <i class="fas fa-terminal text-indigo-400 mr-2"></i>MANVIR<span class="text-indigo-400">.ADMIN</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0a053c] border-b border-white/10">
+            <a href="#home" class="block py-3 px-6 text-gray-300 hover:bg-white/5 hover:text-white transition">Home</a>
+            <a href="#about" class="block py-3 px-6 text-gray-300 hover:bg-white/5 hover:text-white transition">About</a>
+            <a href="#skills" class="block py-3 px-6 text-gray-300 hover:bg-white/5 hover:text-white transition">Skills</a>
+            <a href="#experience" class="block py-3 px-6 text-gray-300 hover:bg-white/5 hover:text-white transition">Experience</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-300 hover:bg-white/5 hover:text-white transition">Contact</a>
+        </div>
+    </header>
+
+    <main class="relative z-10">
+
+        <section id="home" class="container mx-auto px-6 min-h-[85vh] flex flex-col justify-center items-center text-center pt-10">
+            <div class="inline-block px-4 py-2 mb-6 rounded-full bg-white/5 border border-white/10 animate-fade-in-up">
+                <span class="text-indigo-400 font-medium">Available for Hiring</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+                Hi, I'm <span class="accent-text">Manvir Singh</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl text-gray-300 font-light mb-8">
+                IT System Administrator & Linux Server Specialist
+            </h2>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                5+ years of experience managing robust Linux infrastructures, Cloud environments (AWS), and Network Security. I ensure your systems are secure, online, and optimized.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#contact" class="btn-primary text-white font-semibold px-8 py-4 rounded-lg flex items-center justify-center gap-2">
+                    <i class="fas fa-paper-plane"></i> Contact Me
+                </a>
+                <a href="#experience" class="glass-card text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 flex items-center justify-center gap-2">
+                    <i class="fas fa-briefcase"></i> View Experience
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="container mx-auto px-6 py-20 fade-in-section">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-6">About Me</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        I am an IT System Administrator with over 5 years of hands-on experience in managing, monitoring, and supporting Linux servers and IT infrastructure. My expertise spans across server installation, performance tuning, security, and complex network support.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        I specialize in AWS cloud management, cPanel hosting, and ensuring 99.9% system uptime. I am a reliable team player focused on stable operations and quick issue resolution.
+                    </p>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold text-white mb-4 border-b border-indigo-500/30 pb-2 inline-block">Education</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-graduation-cap text-indigo-400 mt-1"></i>
+                                <div>
+                                    <h4 class="text-white font-medium">Bachelor of Business Administration</h4>
+                                    <p class="text-sm text-gray-400">Punjab Technical University, 2019</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-school text-indigo-400 mt-1"></i>
+                                <div>
+                                    <h4 class="text-white font-medium">12th Grade</h4>
+                                    <p class="text-sm text-gray-400">Guru Nanak Public School, Chandigarh, 2016</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="glass-card p-6">
+                        <i class="fab fa-linux fa-2x text-indigo-400 mb-3"></i>
+                        <h3 class="text-lg font-bold text-white mb-2">Linux Admin</h3>
+                        <p class="text-sm text-gray-400">User management, Permissions, SSH, Shell Scripting, RPM.</p>
+                    </div>
+                    <div class="glass-card p-6">
+                        <i class="fas fa-cloud fa-2x text-indigo-400 mb-3"></i>
+                        <h3 class="text-lg font-bold text-white mb-2">Cloud (AWS)</h3>
+                        <p class="text-sm text-gray-400">EC2, S3, Lightsail, Snapshots, DigitalOcean Droplets.</p>
+                    </div>
+                    <div class="glass-card p-6">
+                        <i class="fas fa-network-wired fa-2x text-indigo-400 mb-3"></i>
+                        <h3 class="text-lg font-bold text-white mb-2">Networking</h3>
+                        <p class="text-sm text-gray-400">Firewalls, Routers, Wi-Fi Config, Troubleshooting.</p>
+                    </div>
+                    <div class="glass-card p-6">
+                        <i class="fas fa-server fa-2x text-indigo-400 mb-3"></i>
+                        <h3 class="text-lg font-bold text-white mb-2">Web Servers</h3>
+                        <p class="text-sm text-gray-400">Apache, cPanel, GoDaddy, MySQL, SSL Installation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="container mx-auto px-6 py-10 fade-in-section">
+            <div class="glass-card p-8 text-center">
+                <h3 class="text-2xl font-bold text-white mb-8">Technical Proficiency</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="skill-tag">Linux (RedHat/Ubuntu)</span>
+                    <span class="skill-tag">AWS EC2 & S3</span>
+                    <span class="skill-tag">System Administration</span>
+                    <span class="skill-tag">Apache Web Server</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">cPanel/WHM</span>
+                    <span class="skill-tag">GitLab</span>
+                    <span class="skill-tag">Bash Scripting</span>
+                    <span class="skill-tag">Network Security</span>
+                    <span class="skill-tag">Backup & Recovery (TAR)</span>
+                    <span class="skill-tag">SSL Certificates</span>
+                    <span class="skill-tag">Troubleshooting</span>
+                    <span class="skill-tag">DigitalOcean</span>
+                    <span class="skill-tag">Hardware Maintenance</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="container mx-auto px-6 py-20 fade-in-section">
+            <h2 class="text-3xl font-bold text-white text-center mb-16">Professional Experience</h2>
+            <div class="max-w-4xl mx-auto relative pl-4 sm:pl-0">
+                
+                <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-indigo-500/20 md:left-1/2 md:-ml-0.5"></div>
+
+                <div class="relative mb-12 md:mb-16">
+                    <div class="md:flex items-center justify-between">
+                        <div class="md:w-5/12 mb-4 md:mb-0 md:text-right order-1">
+                            <h3 class="text-xl font-bold text-white">IT System Administrator</h3>
+                            <h4 class="text-indigo-400 font-medium">GrayCell Technologies</h4>
+                            <p class="text-sm text-gray-500 mt-1">Apr 2025 - Present</p>
+                        </div>
+                        <div class="absolute left-8 md:left-1/2 -ml-3 w-6 h-6 rounded-full bg-indigo-600 border-4 border-[#02042B] order-2 z-10"></div>
+                        <div class="md:w-5/12 pl-16 md:pl-8 order-3">
+                            <div class="glass-card p-5">
+                                <ul class="list-disc list-inside text-gray-300 text-sm space-y-2">
+                                    <li>Managing Linux servers and overall IT infrastructure.</li>
+                                    <li>Hands-on with AWS (EC2, S3, Backups) and cPanel hosting.</li>
+                                    <li>Manual SSL installation and server-to-server migration.</li>
+                                    <li>Complete IT department operations management.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-12 md:mb-16">
+                    <div class="md:flex items-center justify-between">
+                        <div class="md:w-5/12 order-1 md:order-3 pl-16 md:pl-8">
+                            <h3 class="text-xl font-bold text-white">Network Admin</h3>
+                            <h4 class="text-indigo-400 font-medium">WorksDelight</h4>
+                            <p class="text-sm text-gray-500 mt-1">Jan 2024 - Sep 2024</p>
+                        </div>
+                        <div class="absolute left-8 md:left-1/2 -ml-3 w-6 h-6 rounded-full bg-indigo-900 border-4 border-[#02042B] order-2 z-10"></div>
+                        <div class="md:w-5/12 order-3 md:order-1 mb-4 md:mb-0 md:text-right pl-16 md:pl-0">
+                            <div class="glass-card p-5">
+                                <ul class="list-disc list-inside text-gray-300 text-sm space-y-2 text-left md:text-right" dir="auto">
+                                    <li>Troubleshooting hardware and OS-related issues.</li>
+                                    <li>Creating AWS Lightsail instances and setting up websites.</li>
+                                    <li>Managed office systems and networking accessories.</li>
+                                    <li>cPanel website setups and configuration.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-12 md:mb-16">
+                    <div class="md:flex items-center justify-between">
+                        <div class="md:w-5/12 mb-4 md:mb-0 md:text-right order-1">
+                            <h3 class="text-xl font-bold text-white">Linux Server Admin</h3>
+                            <h4 class="text-indigo-400 font-medium">Richestsoft</h4>
+                            <p class="text-sm text-gray-500 mt-1">Mar 2022 - Dec 2023</p>
+                        </div>
+                        <div class="absolute left-8 md:left-1/2 -ml-3 w-6 h-6 rounded-full bg-indigo-900 border-4 border-[#02042B] order-2 z-10"></div>
+                        <div class="md:w-5/12 pl-16 md:pl-8 order-3">
+                            <div class="glass-card p-5">
+                                <ul class="list-disc list-inside text-gray-300 text-sm space-y-2">
+                                    <li>User/Permission management and File ownership.</li>
+                                    <li>Remote server management via SSH.</li>
+                                    <li>Installed DNS, Apache, and configured backups (TAR/ZIP).</li>
+                                    <li>Package installation (RPM) and disk space monitoring.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="md:flex items-center justify-between">
+                        <div class="md:w-5/12 order-1 md:order-3 pl-16 md:pl-8">
+                            <h3 class="text-xl font-bold text-white">System Administrator</h3>
+                            <h4 class="text-indigo-400 font-medium">Esferasoft Pvt. Ltd.</h4>
+                            <p class="text-sm text-gray-500 mt-1">Aug 2020 - Mar 2022</p>
+                        </div>
+                        <div class="absolute left-8 md:left-1/2 -ml-3 w-6 h-6 rounded-full bg-indigo-900 border-4 border-[#02042B] order-2 z-10"></div>
+                        <div class="md:w-5/12 order-3 md:order-1 mb-4 md:mb-0 md:text-right pl-16 md:pl-0">
+                            <div class="glass-card p-5">
+                                <ul class="list-disc list-inside text-gray-300 text-sm space-y-2 text-left md:text-right">
+                                    <li>Apache Web Server & MySQL installation.</li>
+                                    <li>Managed AWS and DigitalOcean cloud environments.</li>
+                                    <li>GitLab administration and hardware installation.</li>
+                                    <li>Troubleshooting system and network issues.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 fade-in-section bg-black/20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-white text-center mb-6">Get In Touch</h2>
+                <p class="text-gray-400 text-center mb-12 max-w-xl mx-auto">
+                    Looking for a dedicated System Administrator to manage your infrastructure? Drop me a message.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                    <div class="space-y-6">
+                        <div class="glass-card p-6 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-indigo-900/50 flex items-center justify-center text-indigo-400">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium">Phone</h4>
+                                <a href="tel:+919877936182" class="text-gray-400 hover:text-white transition">+91 98779 36182</a>
+                            </div>
+                        </div>
+                        <div class="glass-card p-6 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-indigo-900/50 flex items-center justify-center text-indigo-400">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium">Email</h4>
+                                <a href="mailto:manvir2496@gmail.com" class="text-gray-400 hover:text-white transition">manvir2496@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="glass-card p-6 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-indigo-900/50 flex items-center justify-center text-indigo-400">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium">Location</h4>
+                                <p class="text-gray-400">#6222, Sec-56, Chandigarh</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-8">
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label class="block text-gray-400 text-sm mb-2">Name</label>
+                                <input type="text" id="name" required class="w-full bg-[#02042B] border border-indigo-500/30 rounded-lg p-3 text-white focus:outline-none focus:border-indigo-500 transition">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-400 text-sm mb-2">Email</label>
+                                <input type="email" id="email" required class="w-full bg-[#02042B] border border-indigo-500/30 rounded-lg p-3 text-white focus:outline-none focus:border-indigo-500 transition">
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-gray-400 text-sm mb-2">Message</label>
+                                <textarea id="message" rows="4" required class="w-full bg-[#02042B] border border-indigo-500/30 rounded-lg p-3 text-white focus:outline-none focus:border-indigo-500 transition"></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn-primary text-white font-semibold py-3 rounded-lg">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-white/10 bg-black/40">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Manvir Singh. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particle.js configuration
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 40, "density": { "enable": true, "value_area": 800 }},
+                "color": { "value": "#A370F7" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.3, "random": true },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#6C63FF", "opacity": 0.15, "width": 1 },
+                "move": { "enable": true, "speed": 1, "direction": "none", "out_mode": "out" }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                "modes": { "bubble": { "distance": 200, "size": 6, "duration": 2, "opacity": 0.8 }, "push": { "particles_nb": 4 } }
+            },
+            "retina_detect": true
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Active nav link highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const activateNavLink = () => {
+            let index = sections.length;
+            while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
+            
+            navLinks.forEach((link) => link.classList.remove('active'));
+            // Default to Home if at top
+            if(window.scrollY < 100) {
+                 const homeLink = document.querySelector(`.nav-link[href="#home"]`);
+                 if(homeLink) homeLink.classList.add('active');
+            } else {
+                 const activeLink = document.querySelector(`.nav-link[href="#${sections[index].id}"]`);
+                 if (activeLink) activeLink.classList.add('active');
+            }
+        };
+        activateNavLink();
+        window.addEventListener('scroll', activateNavLink);
+        
+        // Email form submission - Corrected to use specific email
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const mailtoEmail = "manvir2496@gmail.com";
+            const subject = "Portfolio Contact: " + name;
+            
+            let emailBody = `New Message from ${name} (${email})\n\n`;
+            emailBody += `--------------------------------------------------\n\n`;
+            emailBody += `${message}`;
+            
+            const encodedSubject = encodeURIComponent(subject);
+            const encodedBody = encodeURIComponent(emailBody);
+            
+            window.location.href = `mailto:${mailtoEmail}?subject=${encodedSubject}&body=${encodedBody}`;
+        });
+    </script>
+</body>
+</html>
